@@ -1,3 +1,5 @@
+using Carter;
+
 namespace Catalog.Api.Product.CreateProduct;
 
 public record CreateProductRequest(
@@ -8,7 +10,10 @@ public record CreateProductRequest(
     decimal Price);
 
 public record CreateProductResponse(Guid Id);
-public class CreateProductEndpoint
+public class CreateProductEndpoint : ICarterModule
 {
-    
+    public void AddRoutes(IEndpointRouteBuilder app)
+    {
+        
+    }
 }
